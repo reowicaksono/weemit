@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/onboarding_screen/bindings/onboarding_screen_binding.dart';
+import '../modules/onboarding_screen/bindings/onboarding_screen_binding.dart';
+import '../modules/onboarding_screen/views/onboarding_screen_view.dart';
 import '../modules/onboarding_screen/views/onboarding_screen_view.dart';
 import '../modules/splash_screen/bindings/splash_screen_binding.dart';
 import '../modules/splash_screen/views/splash_screen_view.dart';
@@ -29,6 +31,13 @@ class AppPages {
       name: _Paths.ONBOARDING_SCREEN,
       page: () => OnboardingScreenView(),
       binding: OnboardingScreenBinding(),
+      children: [
+        GetPage(
+          name: _Paths.ONBOARDING_SCREEN,
+          page: () => OnboardingScreenView(),
+          binding: OnboardingScreenBinding(),
+        ),
+      ],
     ),
   ];
 }
